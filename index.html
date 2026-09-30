@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Metadata -->
+  <title>Kareem Mohamed | Computer Science Student & Data Engineering Trainee</title>
+  <meta name="description" content="Portfolio of Kareem Mohamed — Computer Science Student at Modern Academy and Data Engineering Trainee (DEPI). Specialized in algorithmic problem solving, backend systems, and data pipelines.">
+  <meta name="keywords" content="Kareem Mohamed, Data Engineer, Software Engineer, DEPI, Computer Science, C++, Python, ASP.NET Core, Flutter, SQL Server, Cairo Egypt">
+  <meta name="author" content="Kareem Mohamed">
+  
+  <!-- Favicon (Abstract Monochromatic Tech Icon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23121212'/><path d='M30 25 L30 75 M30 50 L50 25 M35 45 L55 75 M65 25 L65 75 L75 55 L85 75 L85 25' stroke='%23f5f5f7' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Navbar
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Logo / Monogram -->
+      <a href="#hero" class="nav-brand" aria-label="Kareem Mohamed Portfolio Home">
+        <div class="brand-badge">KM</div>
+        <span>Kareem Mohamed</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="#education" class="nav-link" data-i18n="nav.education">Education</a>
+        <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <!-- Controls & Actions -->
+      <div class="nav-actions">
+        <!-- Resume Trigger -->
+        <button type="button" class="btn btn-outline" id="cvModalBtn" style="padding: 0.45rem 0.95rem; font-size: 0.85rem;" data-i18n="nav.cvBtn">
+          Resume
+        </button>
+
+        <!-- Language Switcher (EN / AR) -->
+        <button type="button" class="lang-toggle-btn" id="langToggleBtn" aria-label="Switch Language" data-i18n="nav.langToggle">
+          العربية
+        </button>
+
+        <!-- Theme Toggle (Dark / Light) -->
+        <button type="button" class="icon-btn" id="themeToggleBtn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="theme-icon-moon" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Open mobile navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       Hero Section
+       ========================================================================= -->
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Information Column -->
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="pulse-dot"></span>
+            <span data-i18n="hero.badge">Available for Software & Data Engineering Roles</span>
+          </div>
+
+          <h1 class="hero-name">
+            <span data-i18n="hero.greeting">Hello, I am</span>
+            <span id="heroNameText" data-i18n="hero.name">Kareem Mohamed</span>
+          </h1>
+
+          <div class="hero-title" data-i18n="hero.title">
+            Computer Science Student & Data Engineering Trainee (DEPI)
+          </div>
+
+          <p class="hero-bio" data-i18n="hero.bio">
+            Aspiring Software & Data Engineer specialized in algorithmic problem solving, backend systems, and scalable data pipelines.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">
+              Explore Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="hero.ctaContact">
+              Get In Touch
+            </a>
+            <button type="button" class="btn btn-outline" id="heroCvBtn" data-i18n="hero.ctaCV">
+              View Curriculum Vitae
+            </button>
+          </div>
+
+          <!-- Quantitative Highlights Bar -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="hero.stats.problemsSolved">100+</span>
+              <span class="stat-label" data-i18n="hero.stats.problemsLabel">Algorithmic Problems</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="hero.stats.gpa">3.2</span>
+              <span class="stat-label" data-i18n="hero.stats.gpaLabel">Academic GPA / 4.0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="hero.stats.training">DEPI</span>
+              <span class="stat-label" data-i18n="hero.stats.trainingLabel">Data Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Abstract Tech Visual Showcase (Strictly NO Personal Photos) -->
+        <div class="hero-visual">
+          <!-- Interactive Terminal Card -->
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="terminal-filename" data-i18n="hero.terminal.header">kareem_profile.py</span>
+              <button type="button" class="terminal-action-btn" id="runCodeBtn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span data-i18n="hero.terminal.runBtn">Execute</span>
+              </button>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+              <div class="terminal-line">
+                <span class="line-num">1</span>
+                <span><span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd, numpy <span class="code-keyword">as</span> np</span>
+              </div>
+              <div class="terminal-line">
+                <span class="line-num">2</span>
+                <span><span class="code-comment"># Engineer & Candidate Specification</span></span>
+              </div>
+              <div class="terminal-line">
+                <span class="line-num">3</span>
+                <span>kareem = {</span>
+              </div>
+              <div class="terminal-line">
+                <span class="line-num">4</span>
+                <span>&nbsp;&nbsp;<span class="code-prop">"role"</span>: <span class="code-str">"Data & Software Engineer"</span>,</span>
+              </div>
+              <div class="terminal-line">
+                <span class="line-num">5</span>
+                <span>&nbsp;&nbsp;<span class="code-prop">"institution"</span>: <span class="code-str">"Modern Academy"</span>,</span>
+              </div>
+              <div class="terminal-line">
+                <span class="line-num">6</span>
+                <span>&nbsp;&nbsp;<span class="code-prop">"gpa"</span>: <span class="code-func">3.2</span>,</span>
+              </div>
+              <div class="terminal-line">
+                <span class="line-num">7</span>
+                <span>&nbsp;&nbsp;<span class="code-prop">"focus"</span>: [<span class="code-str">"ETL Pipelines"</span>, <span class="code-str">"RDBMS"</span>, <span class="code-str">"Algorithms"</span>]</span>
+              </div>
+              <div class="terminal-line">
+                <span class="line-num">8</span>
+                <span>}</span>
+              </div>
+              <div class="terminal-line">
+                <span class="line-num">9</span>
+                <span><span class="code-keyword">def</span> <span class="code-func">verify_pipeline</span>(candidate):</span>
+              </div>
+              <div class="terminal-line">
+                <span class="line-num">10</span>
+                <span>&nbsp;&nbsp;<span class="code-keyword">return</span> candidate[<span class="code-str">"gpa"</span>] &gt;= <span class="code-func">3.0</span> <span class="code-keyword">and</span> len(candidate[<span class="code-str">"focus"</span>]) == <span class="code-func">3</span></span>
+              </div>
+              <div class="terminal-output" id="terminalOutput">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span id="terminalStatusMsg" data-i18n="hero.terminal.outputStatus">System Ready: Click Execute to run diagnostic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Data Pipeline Flow Visualizer -->
+          <div class="pipeline-widget">
+            <div class="pipeline-header">
+              <span class="pipeline-title">Live Pipeline Architecture</span>
+              <span class="tag" style="padding: 0.2rem 0.5rem; font-size: 0.7rem;">ETL Active</span>
+            </div>
+            <div class="pipeline-nodes">
+              <div class="pipeline-node active">
+                <div class="node-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <span class="node-label">Raw Data</span>
+              </div>
+              <div class="pipeline-node active">
+                <div class="node-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <span class="node-label">Pandas/ETL</span>
+              </div>
+              <div class="pipeline-node active">
+                <div class="node-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+                <span class="node-label">SQL RDBMS</span>
+              </div>
+              <div class="pipeline-node active">
+                <div class="node-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+                <span class="node-label">Analytics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         About & Education Section
+         ========================================================================= -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="about.sectionBadge">Profile & Academic Path</div>
+          <h2 class="section-title" data-i18n="about.sectionTitle">About & Education</h2>
+          <p class="section-desc" data-i18n="about.sectionDesc">
+            Grounding theoretical algorithmic rigor with modern enterprise architectures and analytical data workflows.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Engineering Philosophy & Highlights -->
+          <div class="card about-card">
+            <h3 data-i18n="about.aboutCardTitle">Engineering Philosophy</h3>
+            <p data-i18n="about.aboutCardP1">
+              I am a Computer Science student at Modern Academy for Engineering and Technology with a dedicated focus on building robust backend services and data-intensive systems. My journey bridges the discipline of competitive programming with practical engineering at DEPI and Ray Group.
+            </p>
+            <p data-i18n="about.aboutCardP2">
+              Whether optimizing dynamic programming solutions on Codeforces, constructing multi-tier ASP.NET Core applications, or transforming raw telemetry with Pandas and SQL Server, I aim for scalable, maintainable, and high-performance software.
+            </p>
+
+            <!-- Highlights Checklist -->
+            <div class="highlights-grid" id="aboutHighlightsContainer">
+              <!-- Dynamically populated or rendered -->
+            </div>
+          </div>
+
+          <!-- Right Column: Formal Education & Academic Credentials -->
+          <div class="card education-card" id="education">
+            <div class="edu-badge-header">
+              <span class="section-badge" style="margin-bottom:0;" data-i18n="about.educationTitle">Academic Education</span>
+              <span class="gpa-pill" data-i18n="about.gpaBadge">GPA: 3.2 / 4.0</span>
+            </div>
+
+            <h3 class="edu-degree" data-i18n="about.degree">Bachelor of Science in Computer Science</h3>
+            <div class="edu-institution" data-i18n="about.institution">Modern Academy for Engineering and Technology</div>
+
+            <div class="edu-meta">
+              <span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span data-i18n="about.location">Cairo, Egypt</span>
+              </span>
+              <span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span data-i18n="about.gradDate">Expected July 2028</span>
+              </span>
+            </div>
+
+            <!-- Relevant Academic Coursework -->
+            <div class="coursework-title" data-i18n="about.courseworkTitle">Relevant Academic Coursework</div>
+            <div class="coursework-tags" id="courseworkContainer">
+              <!-- Rendered via JS -->
+            </div>
+
+            <!-- Spoken Languages -->
+            <div class="spoken-langs">
+              <h4 data-i18n="about.spokenLanguagesTitle">Spoken Languages</h4>
+              <div class="spoken-langs-list" id="spokenLangsContainer">
+                <!-- Rendered via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Skills Section
+         ========================================================================= -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="skills.sectionBadge">Technical Arsenal</div>
+          <h2 class="section-title" data-i18n="skills.sectionTitle">Technical Competencies</h2>
+          <p class="section-desc" data-i18n="skills.sectionDesc">
+            A comprehensive breakdown of programming languages, frameworks, data science libraries, and development tools.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="skills-controls">
+          <button type="button" class="filter-btn active" data-category="all" data-i18n="skills.filterAll">All Skills</button>
+          <button type="button" class="filter-btn" data-category="languages" data-i18n="skills.filterLanguages">Languages</button>
+          <button type="button" class="filter-btn" data-category="frameworks" data-i18n="skills.filterFrameworks">Frameworks & Core</button>
+          <button type="button" class="filter-btn" data-category="dataScience" data-i18n="skills.filterData">Data Science</button>
+          <button type="button" class="filter-btn" data-category="tools" data-i18n="skills.filterTools">Tools & RDBMS</button>
+        </div>
+
+        <!-- Dynamic Skills Grid -->
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Experience & Technical Training Section
+         ========================================================================= -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="experience.sectionBadge">Career & Training Journey</div>
+          <h2 class="section-title" data-i18n="experience.sectionTitle">Experience & Technical Training</h2>
+          <p class="section-desc" data-i18n="experience.sectionDesc">
+            Hands-on industrial specialization tracks in enterprise backend architecture, competitive algorithmic tracks, and data engineering.
+          </p>
+        </div>
+
+        <!-- Interactive Vertical Timeline -->
+        <div class="timeline" id="timelineContainer">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Projects Section
+         ========================================================================= -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="projects.sectionBadge">Featured Work</div>
+          <h2 class="section-title" data-i18n="projects.sectionTitle">Engineered Projects</h2>
+          <p class="section-desc" data-i18n="projects.sectionDesc">
+            Selected software and database systems demonstrating cross-platform development and relational data architecture.
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Contact Section
+         ========================================================================= -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="contact.sectionBadge">Initiate Communication</div>
+          <h2 class="section-title" data-i18n="contact.sectionTitle">Get In Touch</h2>
+          <p class="section-desc" data-i18n="contact.sectionDesc">
+            Whether you have an opportunity, a technical collaboration, or an internship inquiry, my inbox is always open.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Cards with Click to Copy -->
+          <div class="contact-info">
+            <div class="contact-avail-card">
+              <span class="pulse-dot"></span>
+              <span style="font-weight: 600; font-size: 0.92rem;" data-i18n="contact.availabilityBadge">
+                Open to Internships & Engineering Roles
+              </span>
+            </div>
+
+            <div class="contact-items">
+              <!-- Email Tile -->
+              <div class="contact-tile">
+                <div class="contact-tile-main">
+                  <div class="contact-tile-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-tile-label" data-i18n="contact.emailLabel">Email Address</div>
+                    <a href="mailto:km6482271@gmail.com" class="contact-tile-val">km6482271@gmail.com</a>
+                  </div>
+                </div>
+                <button type="button" class="copy-btn" data-clipboard="km6482271@gmail.com" aria-label="Copy Email Address" title="Copy Email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Phone Tile -->
+              <div class="contact-tile">
+                <div class="contact-tile-main">
+                  <div class="contact-tile-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-tile-label" data-i18n="contact.phoneLabel">Phone Number</div>
+                    <a href="tel:+201013929964" class="contact-tile-val" dir="ltr">(+20) 10-1392-9964</a>
+                  </div>
+                </div>
+                <button type="button" class="copy-btn" data-clipboard="(+20) 10-1392-9964" aria-label="Copy Phone Number" title="Copy Phone">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Location Tile -->
+              <div class="contact-tile">
+                <div class="contact-tile-main">
+                  <div class="contact-tile-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-tile-label" data-i18n="contact.locationLabel">Location</div>
+                    <div class="contact-tile-val" data-i18n="contact.locationValue">Cairo, Egypt</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LinkedIn Tile -->
+              <a href="https://linkedin.com/in/kareemmohamed" target="_blank" rel="noopener noreferrer" class="contact-tile">
+                <div class="contact-tile-main">
+                  <div class="contact-tile-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-tile-label" data-i18n="contact.linkedinLabel">LinkedIn Profile</div>
+                    <div class="contact-tile-val">linkedin.com/in/kareemmohamed</div>
+                  </div>
+                </div>
+                <div class="icon-btn" style="border:none; width:30px; height:30px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </div>
+              </a>
+
+              <!-- GitHub Tile -->
+              <a href="https://github.com/Kareem19mohamed" target="_blank" rel="noopener noreferrer" class="contact-tile">
+                <div class="contact-tile-main">
+                  <div class="contact-tile-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-tile-label" data-i18n="contact.githubLabel">GitHub Profile</div>
+                    <div class="contact-tile-val">github.com/Kareem19mohamed</div>
+                  </div>
+                </div>
+                <div class="icon-btn" style="border:none; width:30px; height:30px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="senderName" class="form-label" data-i18n="contact.formName">Your Full Name</label>
+                <input type="text" id="senderName" class="form-input" required placeholder="e.g. Alex Henderson">
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label" data-i18n="contact.formEmail">Your Email Address</label>
+                <input type="email" id="senderEmail" class="form-input" required placeholder="alex@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="senderSubject" class="form-label" data-i18n="contact.formSubject">Subject / Role</label>
+                <input type="text" id="senderSubject" class="form-input" required placeholder="Software Engineer / DEPI Inquiry">
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label" data-i18n="contact.formMessage">Your Message</label>
+                <textarea id="senderMessage" class="form-textarea" required placeholder="Write your message here..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="submitFormBtn" style="width: 100%;">
+                <span id="submitBtnText" data-i18n="contact.formSubmit">Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="nav-brand">
+          <div class="brand-badge">KM</div>
+          <span>Kareem Mohamed</span>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://github.com/Kareem19mohamed" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/kareemmohamed" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:km6482271@gmail.com" class="icon-btn" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.builtWith">Designed with minimalist precision using pure HTML5, CSS3 & JavaScript.</p>
+        <div style="display:flex; align-items:center; gap: 1.5rem;">
+          <span data-i18n="footer.rights">All rights reserved © 2026.</span>
+          <a href="#hero" class="btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.8rem; border-radius: var(--radius-sm);" data-i18n="footer.backToTop">
+            Back to Top ↑
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Project Architecture Details Modal
+       ========================================================================= -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalProjectTitle">System Architecture</h3>
+        <button type="button" class="icon-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body" id="modalProjectBody">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="modalFooterClose" data-i18n="projects.modalClose">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Curriculum Vitae (CV) Preview & Print Modal
+       ========================================================================= -->
+  <div class="modal-overlay" id="cvModal" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+    <div class="modal-content" style="max-width: 850px;">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="cvModalTitle" data-i18n="cvModal.title">Curriculum Vitae</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted);" data-i18n="cvModal.subtitle">Kareem Mohamed — Software & Data Engineering Profile</p>
+        </div>
+        <button type="button" class="icon-btn" id="cvModalCloseBtn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body" id="cvModalBody">
+        <!-- Structured printable CV view -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="cvPrintBtn" data-i18n="cvModal.printBtn">Print / Save PDF</button>
+        <button type="button" class="btn btn-secondary" id="cvFooterClose" data-i18n="cvModal.closeBtn">Close Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Toast Notification Container
+       ========================================================================= -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

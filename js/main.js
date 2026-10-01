@@ -58,7 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyTheme(theme) {
     state.theme = theme;
     htmlRoot.setAttribute('data-theme', theme);
+    htmlRoot.style.colorScheme = theme;
     localStorage.setItem('km_theme', theme);
+
+    // Update browser theme-color meta tag for native browser UI tinting
+    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement('meta');
+      metaThemeColor.name = 'theme-color';
+      document.head.appendChild(metaThemeColor);
+    }
+    metaThemeColor.setAttribute('content', theme === 'dark' ? '#0a0a0d' : '#f8f8fa');
 
     if (theme === 'dark') {
       sunIcon.style.display = 'block';
@@ -72,6 +82,15 @@ document.addEventListener('DOMContentLoaded', () => {
   themeToggleBtn.addEventListener('click', () => {
     applyTheme(state.theme === 'dark' ? 'light' : 'dark');
   });
+
+  // Listen to OS theme changes if user hasn't explicitly set preference
+  if (!localStorage.getItem('km_theme') && window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('km_theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  }
 
   /* --------------------------------------------------------------------------
      Internationalization (i18n) & Language Switching

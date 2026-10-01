@@ -29,8 +29,6 @@ const i18nData = {
       ctaContact: "Get In Touch",
       ctaCV: "View Curriculum Vitae",
       stats: {
-        problemsSolved: "100+",
-        problemsLabel: "Algorithmic Problems",
         gpa: "3.2",
         gpaLabel: "Academic GPA / 4.0",
         training: "DEPI",
@@ -268,8 +266,6 @@ const i18nData = {
       ctaContact: "تواصل معي",
       ctaCV: "عرض السيرة الذاتية",
       stats: {
-        problemsSolved: "+100",
-        problemsLabel: "مسألة خوارزمية تم حلها",
         gpa: "3.2",
         gpaLabel: "المعدل التراكمي / 4.0",
         training: "DEPI",
